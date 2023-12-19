@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Worldwide Map Analytics</title>
+</head>
+<body>
+    {% extends "main.html" %}
+
+    {% block content %}
+        <h1>Worlwide Map</h1>
+        <div>
+            <script type="text/javascript" src="https://ssl.gstatic.com/trends_nrtr/3570_RC01/embed_loader.js"></script>
+            <script type="text/javascript">
+                trends.embed.renderExploreWidget("GEO_MAP", {"comparisonItem":[{"keyword":"Football","geo":"","time":"today 3-m"},{"keyword":"Rugby","geo":"","time":"today 3-m"},{"keyword":"Tennis","geo":"","time":"today 3-m"}],"category":20,"property":""}, {"exploreQuery":"cat=20&date=today%203-m&q=Football,Rugby,Tennis&hl=en-GB","guestPath":"https://trends.google.com:443/trends/embed/"});
+            </script>
+        </div>
+    {% endblock %}
+</body>
+</html>

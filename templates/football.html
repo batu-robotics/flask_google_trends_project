@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Football Information</title>
+</head>
+<body>
+    {% extends "main.html" %}
+
+    {% block content %}
+        <h1>Football Trend Information</h1>
+
+        <div class="d-flex flex-row card" style="align-items:center;
+                                                 width:60rem;">
+            <script type="text/javascript" src="https://ssl.gstatic.com/trends_nrtr/3570_RC01/embed_loader.js"></script>
+            <script type="text/javascript">
+                trends.embed.renderExploreWidget("GEO_MAP_0", {"comparisonItem":[{"keyword":"football","geo":"","time":"today 3-m"},{"keyword":"Rugby","geo":"","time":"today 3-m"},{"keyword":"tennis","geo":"","time":"today 3-m"}],"category":20,"property":""}, {"exploreQuery":"cat=20&date=today%203-m&q=football,Rugby,tennis&hl=en-GB","guestPath":"https://trends.google.com:443/trends/embed/"});
+            </script>
+
+            <script type="text/javascript" src="https://ssl.gstatic.com/trends_nrtr/3570_RC01/embed_loader.js"></script>
+            <script type="text/javascript">
+                trends.embed.renderExploreWidget("RELATED_QUERIES_0", {"comparisonItem":[{"keyword":"football","geo":"","time":"today 3-m"},{"keyword":"Rugby","geo":"","time":"today 3-m"},{"keyword":"tennis","geo":"","time":"today 3-m"}],"category":20,"property":""}, {"exploreQuery":"cat=20&date=today%203-m&q=football,Rugby,tennis&hl=en-GB","guestPath":"https://trends.google.com:443/trends/embed/"});
+            </script>
+        </div>
+
+    {% endblock %}
+
+</body>
+</html>
